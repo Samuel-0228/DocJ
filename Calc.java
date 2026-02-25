@@ -10,16 +10,21 @@ public class Calc{
 
        Scanner sc = new Scanner(System.in);
        do{ 
-            System.out.println("=====Menu=====");
-            System.out.print("1.Addition");
-            System.out.print("2.Multi");
-            System.out.print("3.Div");
-            System.out.print("4.Sub");
-            System.out.print("5. Exit")
+          System.out.println("""
+                        =====Menu=====
+                        1. Addition
+                        2. Multiply  
+                        3. Division
+                        4. Subtract
+                        5. Exit
+                        Enter choice: """);
+
 
             choice= sc.nextInt();
 
-
+            if(choice == 5){
+               break;
+            }
             System.out.print("Enter number 1: ");
             int num = sc.nextInt(); 
             
@@ -29,11 +34,24 @@ public class Calc{
             switch(choice){
                case 1:
                   System.out.println(num + num2);
+                  break;
+               case 2:
+                  System.out.println(num * num2);
+                  break;
+               case 3:
+                  System.out.println(num / num2);
+                  break;
+               case 4:
+                  System.out.println(num - num2);
+                  break;
+               case 5:
+                  System.out.println("Exit");
+                  break;
+               default:
+                  System.out.println("Invalid choice");
+                  break;
                            }
-
-            
-           
-       }while(choice != 5);
+           }while(choice != 5);
 
       
       
