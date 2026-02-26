@@ -68,3 +68,5 @@ pids
 hs_err_pid*
 jre/
 lombok/
+
+.class
