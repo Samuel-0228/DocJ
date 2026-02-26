@@ -1,0 +1,1 @@
+"java.jdt.ls.vmargs": "-Xms1G -Xmx2G -XX:+UseG1GC -XX:+UseStringDeduplication"
