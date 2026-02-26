@@ -1,29 +1,26 @@
-/*6.	Write a program that simulates coin tossing. For each toss
- of the coin, the program should print Heads or Tails. Let the program 
- toss the coin 100 times and count the number of times each side of 
- the coin appears. Print the results. The program should call
-  a separate function flip that takes no arguments and returns 
-  0 for tails and 1 for heads. [Note: If the program realistically 
-  simulates the coin tossing, then each side of the coin should appear 
-  approximately half the time */
-
-import java.util.Scanner;
-  public class prob{
-    
-    public static void main(String[] args){
-        int head=0,tail=0;
-     while((head+tail)<=100){   
-        srand(time(0));
-        int face= rand()%2;
-        if(face==0){
-            head++;
-        }
-        else{
-            tail++;
-        }}
-
-        system.out.println("Heads: "+head);
-        system.out.println("Heads: "+head);
-
+public class CoinToss {  // Fixed class name
+    // REQUIRED flip() function
+    public static int flip() {
+        return (int) (Math.random() * 2);  // 0=tails, 1=heads
     }
-  }
+    
+    public static void main(String[] args) {
+        int heads = 0, tails = 0;
+        
+        // Toss 100 times
+        for (int i = 0; i < 100; i++) {
+            int face = flip();  // Call function
+            
+            if (face == 1) {    // Problem says 1=heads
+                System.out.println("Heads");  // Print each toss
+                heads++;
+            } else {
+                System.out.println("Tails");
+                tails++;
+            }
+        }
+        
+        System.out.println("Heads: " + heads);
+        System.out.println("Tails: " + tails);
+    }
+}
