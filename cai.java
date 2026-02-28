@@ -10,9 +10,9 @@ public class cai {
         int num=10;
         
          System.out.println("Enter difficulty level: ");
-            System.out.println("1. Hard");
-            System.out.println("2. Medium");
-            System.out.println("3. Easy");
+            System.out.println("1. Hard(in random numbers between 1 and 1000)");
+            System.out.println("2. Medium(in random numbers between 1 and 100)");
+            System.out.println("3. Easy(in random numbers between 1 and 10)");
             int level = sc.nextInt();
 
             switch(level){
