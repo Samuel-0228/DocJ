@@ -17,15 +17,15 @@ public class cai {
 
             switch(level){
                 case 1:
-                    rand = new Random(1000);
+                    //rand = new Random(1000);
                     num=1000;
                     break;
                 case 2:
-                    rand = new Random(100);
+                   // rand = new Random(100);
                     num=100;
                     break;
                 case 3:
-                    rand = new Random(10);
+                   // rand = new Random(10);
                     num=10;
                     break;
             }
@@ -57,7 +57,7 @@ public class cai {
                 correctanswer=num1*num2;
                 break;
             case 3:
-                System.out.println("What is " + num2 + "substracted from" + num1 + "? ");
+                System.out.println("What is " + num2 + " substracted from " + num1 + "? ");
                 answer = sc.nextInt();
                 correctanswer=num1-num2;
                 break;
