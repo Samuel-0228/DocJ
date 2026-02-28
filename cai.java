@@ -7,7 +7,7 @@ public class cai {
         Random rand = new Random();
         int correctanswer=0;
         int answer=0;
-        int num=10;
+        int num=10,round=0;
         
          System.out.println("Enter difficulty level: ");
             System.out.println("1. Hard(in random numbers between 1 and 1000)");
@@ -69,15 +69,15 @@ public class cai {
         }
 
         if(answer==correctanswer){
-            System.out.println("Correct");
+            System.out.println("Correct, try another one!");
         }
         else {
             System.out.println("Wrong. The correct answer is " + correctanswer);
         }
 
-            
+         round++;   
            
-        } while(true);
+        } while(round<=5);
         sc.close();
     }
 }
