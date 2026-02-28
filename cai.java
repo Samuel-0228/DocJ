@@ -7,7 +7,28 @@ public class cai {
         Random rand = new Random();
         int correctanswer=0;
         int answer=0;
+        int num=10;
         
+         System.out.println("Enter difficulty level: ");
+            System.out.println("1. Hard");
+            System.out.println("2. Medium");
+            System.out.println("3. Easy");
+            int level = sc.nextInt();
+
+            switch(level){
+                case 1:
+                    rand = new Random(1000);
+                    num=1000;
+                    break;
+                case 2:
+                    rand = new Random(100);
+                    num=100;
+                    break;
+                case 3:
+                    rand = new Random(10);
+                    num=10;
+                    break;
+            }
        
         
         do {
@@ -21,25 +42,8 @@ public class cai {
             
             if(choice == 5) break;
 
-            System.out.println("Enter difficulty level: ");
-            System.out.println("1. Hard");
-            System.out.println("2. Medium");
-            System.out.println("3. Easy");
-            int level = sc.nextInt();
-
-            switch(level){
-                case 1:
-                    rand = new Random(1000);
-                    break;
-                case 2:
-                    rand = new Random(100);
-                    break;
-                case 3:
-                    rand = new Random(10);
-                    break;
-            }
-            int num1 = rand.nextInt()+1;
-            int num2 = rand.nextInt() + 1;
+            int num1 = rand.nextInt(num)+1;
+            int num2 = rand.nextInt(num) + 1;
 
          switch(choice){ 
             case 1: 
