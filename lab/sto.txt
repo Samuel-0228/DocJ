@@ -1,0 +1,55 @@
+public class Student {
+	// Members (private attributes)
+	private String firstName;
+	private String lastName;
+	private int id;
+	private double gpa;
+
+	// Accessors (getters)
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public double getGpa() {
+		return gpa;
+	}
+
+	// Mutators (setters)
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setGpa(double gpa) {
+		if (gpa >= 0.0 && gpa <= 4.0) {
+			this.gpa = gpa;
+		}
+	}
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.setFirstName("John");
+		s.setLastName("Doe");
+		s.setId(101);
+		s.setGpa(3.7);
+
+		System.out.println("Student: " + s.getFirstName() + " " + s.getLastName());
+		System.out.println("ID: " + s.getId());
+		System.out.println("GPA: " + s.getGpa());
+	}
+}
