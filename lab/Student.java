@@ -1,23 +1,30 @@
-package et.edu.aau;
-public class Student{
- private String firstName;
- private String lastName;
- private int year;
- public String getFirstName(){
- return firstName;
+class Student {
+ private String name;
+private int id;
+ private double gpa;
+
+ public static int enrollmentCount = 0;
+
+ public Student(String name, int id, double gpa) {
+ this.name = name;
+ this.id = id;
+ this.gpa = gpa;
+ enrollmentCount++; 
  }
-public String getLastName(){
- return lastName;
+
+ public Student(String name, int id) {
+ this.name = name;
+ this.id = id;
+ this.gpa = 0.0;
+ enrollmentCount++;
  }
-public int getYear(){
- return year;
+
+ public void displayInfo() {
+ System.out.println("ID: " + id + " | Name: " + name + " | GPA: " + gpa);
+ }
+
+ public void displayInfo(String header) {
+ System.out.println("--- " + header + " ---");
+ displayInfo();
+ }
 }
-public void setFirstName(String firstName){
- this.firstName=firstName;
-}
-public void setLastName(String lastName){
- this.lastName=lastName;
-}
-public void setYear(int year){
- this.year=year;
-} 
