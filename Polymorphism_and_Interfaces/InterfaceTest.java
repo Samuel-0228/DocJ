@@ -89,6 +89,10 @@ class Cylinder extends Circle4 {
 
     public Cylinder(int xValue, int yValue, double rValue, double hValue) {
         super(xValue, yValue, rValue);
+        setHeight(hValue);
+    }
+
+    public void setHeight(double hValue) {
         height = (hValue < 0.0 ? 0.0 : hValue);
     }
 
